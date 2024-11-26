@@ -15,13 +15,13 @@ function Input({ label, error, ...rest }: InputProps) {
 
   return error ? (
     <div className="bg-custom-background text-custom-text">
-      <p className="text-sm">{label}</p>
+      <p className="text-sm mb-1">{label}</p>
       <input className={errInputClass} {...rest} />
       {error.err ? <p className="text-red-500">{error.errMessage}</p> : null}
     </div>
   ) : (
     <div className="bg-custom-background text-custom-text">
-      <p className="text-sm">{label}</p>
+      <p className="text-sm mb-1">{label}</p>
       <input className="border rounded-md p-2 w-full bg-white dark:bg-gray-800 dark:border-gray-700" {...rest} />
     </div>
   )

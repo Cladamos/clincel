@@ -1,7 +1,8 @@
-import { IconBottleFilled, IconLanguage, IconMoon, IconSun } from "@tabler/icons-react"
+import { IconBottleFilled, IconMoon, IconSun } from "@tabler/icons-react"
 import Login from "./login"
 import SignIn from "./sign-in"
 import { useEffect, useState } from "react"
+import LaunguageSelector from "./launguageSelector"
 
 function Header() {
   const [openedLogin, setOpenedLogin] = useState(false)
@@ -67,13 +68,11 @@ function Header() {
               onClick={() => {
                 setDarkMode((t) => !t)
               }}
-              className="bg-primary p-2 rounded-full hover:bg-secondary active:translate-y-0.5"
+              className="bg-primary p-2 rounded-full hover:bg-secondary text-gray-50 active:translate-y-0.5"
             >
               {darkMode ? <IconMoon /> : <IconSun />}
             </button>
-            <button className="bg-primary p-2 rounded-lg hover:bg-secondary active:translate-y-0.5">
-              <IconLanguage />
-            </button>
+            <LaunguageSelector />
           </div>
         </div>
       </div>
