@@ -1,3 +1,4 @@
+import { IconWriting } from "@tabler/icons-react"
 import { useParams } from "react-router"
 
 export type topic = {
@@ -19,7 +20,13 @@ function TopicView(props: { topics: topic[] }) {
 
   return (
     <div className="w-[calc(100vh-16rem)] p-8">
-      <p className="text-2xl font-bold">{topic?.title}</p>
+      <div className="flex flex-row justify-between items-start space-x-4 border-b-2 dark:border-gray-700 border-gray-200 pb-4">
+        <p className="text-2xl font-bold max-w-[calc(100%-3rem)]">{topic?.title}</p>
+        <button className="bg-primary p-2 rounded-md hover:bg-secondary text-gray-50 active:translate-y-0.5">
+          <IconWriting />
+        </button>
+      </div>
+
       <div className="flex flex-col pt-8 gap-20">
         {topic?.entrys?.map((e) => (
           <div key={e.text}>

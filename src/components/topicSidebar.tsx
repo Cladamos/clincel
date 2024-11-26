@@ -12,7 +12,7 @@ function Topics(props: { topics: topic[] }) {
           <Link to={e.route}>
             <div className="box-border h-16 w-xs p-4 rounded-md hover:bg-custom-hover">
               <div className="flex flex-row justify-between">
-                <p className="text-sm">{e.title}</p>
+                <p className="text-sm line-clamp-2">{e.title}</p>
                 <p className="text-sm text-gray-400">{e.count}</p>
               </div>
             </div>

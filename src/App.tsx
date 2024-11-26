@@ -6,8 +6,21 @@ import TopicView, { topic } from "./components/topicView"
 const topicDummies: topic[] = [
   {
     title: "Boyum kisa",
-    count: 9912392,
+    count: 992,
     route: "boyum-kisa",
+    entrys: [
+      {
+        text: "Beni zaten Kim neden sevsinki cirkinim ne uzunum ne zayifim ne kasliyim hicbir ozelligim yok yalniz oldum ve yanlniz ölucem benim yaratilma amacim insanlar sevdikleriyle mutluyken uzaktan izlemek",
+        vote: 232,
+        username: "arda_ozkul123",
+      },
+      { text: "vallaha benim boyda cok kisa nasil yapicazz yaaaa", vote: 0, username: "cladamos" },
+    ],
+  },
+  {
+    title: "Merhaba ins bu truncate isleri iyi calisir dimi lutfennn plsss iyii olr beee",
+    count: 122,
+    route: "boyum-kiqsa",
     entrys: [
       {
         text: "Beni zaten Kim neden sevsinki cirkinim ne uzunum ne zayifim ne kasliyim hicbir ozelligim yok yalniz oldum ve yanlniz ölucem benim yaratilma amacim insanlar sevdikleriyle mutluyken uzaktan izlemek",
