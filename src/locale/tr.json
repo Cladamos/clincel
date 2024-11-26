@@ -4,6 +4,28 @@
       "login": "Giriş Yap",
       "username": "Kullanıcı Adı",
       "password": "Şifre"
+    },
+    "sign-in-page": {
+      "sign-in": "Kayıt Ol",
+      "username": "Kullanıcı Adı",
+      "nickname": "Yazar Adı",
+      "password": "Şifre",
+      "confirm-password": "Şifre Tekrarı",
+      "username-err": "Kullanıcı adı en az 3 karakter olmalı",
+      "nickname-err": "Yazar adı en az 3 karakter olmalı",
+      "password-err": "Şifre en az 3 karakter olmalı",
+      "confirm-password-err": "Şifre tekrarı ile şifre aynı olmalı"
+    },
+    "header": {
+      "login": "Giriş Yap",
+      "sign-in": "Kayıt Ol"
+    },
+    "language-selector": {
+      "turkish": "Türkçe",
+      "english": "İngilizce"
+    },
+    "topic-sidebar": {
+      "topics": "gündem"
     }
   }
 }

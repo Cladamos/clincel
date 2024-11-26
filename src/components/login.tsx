@@ -24,11 +24,13 @@ function Login(props: loginProps) {
         <button onClick={props.close} id="closeModal" className="absolute top-6 right-6 text-gray-500 hover:text-gray-800 active:translate-y-0.5">
           <IconX />
         </button>
-        <p className="text-2xl font-bold">Login</p>
+        <p className="text-2xl font-bold">{t("login-page.login")}</p>
         <div className="pt-4 flex flex-col gap-3">
-          <Input label={t("login-page.login")} />
-          <Input label="Password" />
-          <button className="text-gray-50 bg-primary rounded-md p-2 hover:bg-secondary active:translate-y-0.5 w-full mt-4">Log in</button>
+          <Input label={t("login-page.username")} />
+          <Input label={t("login-page.password")} />
+          <button className="text-gray-50 bg-primary rounded-md p-2 hover:bg-secondary active:translate-y-0.5 w-full mt-4">
+            {t("login-page.login")}
+          </button>
         </div>
       </div>
     </div>

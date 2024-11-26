@@ -3,12 +3,15 @@ import Login from "./login"
 import SignIn from "./sign-in"
 import { useEffect, useState } from "react"
 import LaunguageSelector from "./launguageSelector"
+import { useTranslation } from "react-i18next"
 
 function Header() {
   const [openedLogin, setOpenedLogin] = useState(false)
   const [isLoginAnimating, setIsLoginAnimating] = useState(false)
   const [openedSignIn, setOpenedSignIn] = useState(false)
   const [isSignInAnimating, setIsSignInAnimating] = useState(false)
+
+  const { t } = useTranslation()
 
   const handleOutsideClickLogin = (event: React.MouseEvent<HTMLDivElement>) => {
     if ((event.target as HTMLElement).id === "login") {
@@ -55,13 +58,13 @@ function Header() {
         </div>
         <div className="flex flex-row gap-2 items-center">
           <button onClick={() => setOpenedLogin((o) => !o)} className="p-2 px-4 rounded-md hover:bg-custom-hover active:translate-y-0.5">
-            Login
+            {t("header.login")}
           </button>
           <button
             onClick={() => setOpenedSignIn((o) => !o)}
             className="p-2 px-4 rounded-lg text-primary hover:bg-custom-hover active:translate-y-0.5"
           >
-            Sign-in
+            {t("header.sign-in")}
           </button>
           <div className="flex flex-row gap-4">
             <button

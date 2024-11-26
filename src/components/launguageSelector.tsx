@@ -6,7 +6,7 @@ function LaunguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
 
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const handleChange = () => {
     if (isOpen) {
@@ -23,8 +23,8 @@ function LaunguageSelector() {
   }
 
   const changeLanguage = (l: "en" | "tr") => {
-    i18n.changeLanguage(l)
     handleChange()
+    i18n.changeLanguage(l)
   }
 
   return (
@@ -39,11 +39,11 @@ function LaunguageSelector() {
             isAnimating ? "opacity-0 translate-y-2 pointer-events-none" : "opacity-100 translate-y-0"
           }`}
         >
-          <button onClick={() => changeLanguage("tr")} className="px-4 py-2 text-custom-text hover:bg-custom-hover active:translate-y-0.5">
-            Turkish
+          <button onClick={() => changeLanguage("tr")} className="w-full px-4 py-2 text-custom-text hover:bg-custom-hover active:translate-y-0.5">
+            {t("language-selector.turkish")}
           </button>
-          <button onClick={() => changeLanguage("en")} className="px-4 py-2 text-custom-text hover:bg-custom-hover active:translate-y-0.5">
-            English
+          <button onClick={() => changeLanguage("en")} className="w-full px-4 py-2 text-custom-text hover:bg-custom-hover active:translate-y-0.5">
+            {t("language-selector.english")}
           </button>
         </div>
       )}

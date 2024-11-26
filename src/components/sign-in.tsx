@@ -1,6 +1,7 @@
 import { IconX } from "@tabler/icons-react"
 import { FormEvent, useEffect, useState } from "react"
 import Input from "./input"
+import { useTranslation } from "react-i18next"
 
 type signInProps = {
   opened: boolean
@@ -28,6 +29,8 @@ function SignIn(props: signInProps) {
     const { name, value } = e.currentTarget
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (isTouched) {
@@ -87,15 +90,33 @@ function SignIn(props: signInProps) {
     setErrors(newErrors)
   }
   const inputDatas = [
-    { label: "Username", value: formData.username, name: "username", err: errors.username, errMessage: "Username must be least 3 character" },
-    { label: "Nickname", value: formData.nickname, name: "nickname", err: errors.nickname, errMessage: "Nickname must be least 3 character" },
-    { label: "Password", value: formData.password, name: "password", err: errors.password, errMessage: "Password must be least 7 character" },
     {
-      label: "Confirm Password",
+      label: t("sign-in-page.username"),
+      value: formData.username,
+      name: "username",
+      err: errors.username,
+      errMessage: t("sign-in-page.username-err"),
+    },
+    {
+      label: t("sign-in-page.nickname"),
+      value: formData.nickname,
+      name: "nickname",
+      err: errors.nickname,
+      errMessage: t("sign-in-page.nickname-err"),
+    },
+    {
+      label: t("sign-in-page.password"),
+      value: formData.password,
+      name: "password",
+      err: errors.password,
+      errMessage: t("sign-in-page.password-err"),
+    },
+    {
+      label: t("sign-in-page.confirm-password"),
       value: formData.passwordConfirm,
       name: "passwordConfirm",
       err: errors.passwordConfirm,
-      errMessage: "Passwords needs to be matched",
+      errMessage: t("sign-in-page.confirm-password-err"),
     },
   ]
   return (
@@ -110,7 +131,7 @@ function SignIn(props: signInProps) {
         <button onClick={props.close} id="closeModal" className="absolute top-6 right-6 text-gray-500 hover:text-gray-800 active:translate-y-0.5">
           <IconX />
         </button>
-        <p className="text-2xl font-bold">Sign-in</p>
+        <p className="text-2xl font-bold">{t("sign-in-page.sign-in")}</p>
         <form onSubmit={handleSubmit}>
           <div className="pt-4 flex flex-col gap-3">
             {inputDatas.map((i, index) => (
@@ -125,7 +146,7 @@ function SignIn(props: signInProps) {
               />
             ))}
             <button type="submit" className="text-gray-50 bg-primary rounded-md p-2 hover:bg-secondary active:translate-y-0.5 w-full mt-4">
-              Sign in
+              {t("sign-in-page.sign-in")}
             </button>
           </div>
         </form>

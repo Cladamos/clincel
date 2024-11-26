@@ -4,6 +4,28 @@
       "login": "Login",
       "username": "Username",
       "password": "Password"
+    },
+    "sign-in-page": {
+      "sign-in": "Sign-in",
+      "username": "Username",
+      "nickname": "Nickname",
+      "password": "Password",
+      "confirm-password": "Confirm Password",
+      "username-err": "Username must be least 3 character",
+      "nickname-err": "Nickname must be least 3 character",
+      "password-err": "Password must be least 7 character",
+      "confirm-password-err": "Passwords needs to be matched"
+    },
+    "header": {
+      "login": "Login",
+      "sign-in": "Sign-in"
+    },
+    "language-selector": {
+      "turkish": "Turkish",
+      "english": "English"
+    },
+    "topic-sidebar": {
+      "topics": "topics"
     }
   }
 }
