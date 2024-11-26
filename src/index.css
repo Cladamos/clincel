@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light-background: #f9fafb;
+  --dark-background: #111827;
+  --light-text: #000000;
+  --dark-text: #e5e7eb;
+  --light-hover: #f3f4f6;
+  --dark-hover: #1f2937;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  --background: var(--light-background);
+  --text: var(--light-text);
+  --hover: var(--light-hover);
+}
+
+html.dark {
+  --background: var(--dark-background);
+  --text: var(--dark-text);
+  --hover: var(--dark-hover);
+}

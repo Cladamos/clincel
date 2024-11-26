@@ -1,0 +1,9 @@
+{
+  "translation": {
+    "login-page": {
+      "login": "Login",
+      "username": "Username",
+      "password": "Password"
+    }
+  }
+}
