@@ -26,6 +26,15 @@
     },
     "topic-sidebar": {
       "topics": "gündem"
+    },
+    "create-entry": {
+      "prepare": "Entry oluştur",
+      "send": "Gönder",
+      "character-limit": "Kalan karakter sayısı:",
+      "limit-exceeded": {
+        "part-1": "Karakter limiti",
+        "part-2": "karakter ile aşıldı"
+      }
     }
   }
 }

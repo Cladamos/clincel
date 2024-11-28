@@ -26,6 +26,15 @@
     },
     "topic-sidebar": {
       "topics": "topics"
+    },
+    "create-entry": {
+      "prepare": "Prepare Your Entry",
+      "send": "Send",
+      "character-limit": "Characters left:",
+      "limit-exceeded": {
+        "part-1": "Limit exceeded with",
+        "part-2": "characters"
+      }
     }
   }
 }
