@@ -53,7 +53,8 @@ function CreateEntry(props: createEntryProps) {
             onChange={(e) => setInput(e.target.value)}
             rows={25}
             maxLength={chaLimit + extraChaCount}
-            className="border rounded-md p-2 w-full bg-white dark:bg-gray-800 dark:border-gray-700 resize-none"
+            spellCheck={false}
+            className="border rounded-md p-2 w-full bg-white dark:bg-gray-800 dark:border-gray-700 resize-none no-underline"
           />
           <p className={counterClass}>
             {chaLimit - input.length < 0
