@@ -25,11 +25,11 @@ function Topics(props: { topics: topic[] }) {
     <>
       <div className="flex flex-col w-64 gap-4">
         <p className="text-xl pb-2 px-4 border-b-2 dark:border-gray-700 border-gray-200">{t("topic-sidebar.topics")}</p>
-        <div className="flex flex-col gap-2 max-h-[calc(100vh-20rem)] overflow-y-scroll">
+        <div className="flex flex-col gap-2 max-h-[calc(100vh-20rem)] overflow-y-scroll scrollbar-thin dark:scrollbar-thumb-gray-500 scrollbar-thumb-gray-300 scrollbar-track-transparent">
           {props.topics.map((e) => (
             <Link to={e.route}>
               <div className="box-border h-16 w-xs p-3 rounded-md hover:bg-custom-hover">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between gap-4">
                   <p className="text-sm line-clamp-2">{e.title}</p>
                   <p className="text-sm text-gray-400">{e.count}</p>
                 </div>
