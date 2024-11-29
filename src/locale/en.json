@@ -25,7 +25,8 @@
       "english": "English"
     },
     "topic-sidebar": {
-      "topics": "topics"
+      "topics": "topics",
+      "create": "Start a topic"
     },
     "create-entry": {
       "prepare": "Prepare Your Entry",
@@ -35,6 +36,9 @@
         "part-1": "Limit exceeded with",
         "part-2": "characters"
       }
+    },
+    "create-topic": {
+      "create": "Start a topic"
     }
   }
 }

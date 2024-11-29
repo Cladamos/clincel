@@ -2,6 +2,7 @@ import { IconSend, IconX } from "@tabler/icons-react"
 import classNames from "classnames"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import Textarea from "./textarea"
 
 type createEntryProps = {
   opened: boolean
@@ -27,13 +28,6 @@ function CreateEntry(props: createEntryProps) {
     { "hover:bg-secondary active:translate-y-0.5": !(input.length > chaLimit) },
   )
 
-  const counterClass = classNames(
-    "text-lg text-custom-text",
-    { hidden: chaLimit - input.length >= chaLeftShowcase },
-    { "text-red-500": input.length > chaLimit },
-    { "text-secondary": input.length > chaLimit - chaWarning && !(input.length > chaLimit) },
-  )
-
   return (
     <div
       onClick={props.handleOutsideClick}
@@ -47,27 +41,21 @@ function CreateEntry(props: createEntryProps) {
           <IconX />
         </button>
         <p className="text-2xl font-bold">{t("create-entry.prepare")}</p>
-        <div className="pt-4 flex flex-col gap-2">
-          <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            rows={25}
-            maxLength={chaLimit + extraChaCount}
-            spellCheck={false}
-            className="border rounded-md p-2 w-full bg-white dark:bg-gray-800 dark:border-gray-700 resize-none no-underline"
-          />
-          <p className={counterClass}>
-            {chaLimit - input.length < 0
-              ? t("create-entry.limit-exceeded.part-1") + " " + (input.length - chaLimit) + " " + t("create-entry.limit-exceeded.part-2")
-              : t("create-entry.character-limit") + " " + (chaLimit - input.length)}
-          </p>
-          <button className={buttonInputClass} disabled={input.length > chaLimit}>
-            <div className="flex flex-row gap-2 justify-center">
-              <IconSend />
-              <p className="text-md">{t("create-entry.send")}</p>
-            </div>
-          </button>
-        </div>
+        <Textarea
+          input={input}
+          setInput={setInput}
+          counter
+          chaLimit={chaLimit}
+          chaLeftShowcase={chaLeftShowcase}
+          chaWarning={chaWarning}
+          extraChaCount={extraChaCount}
+        />
+        <button className={buttonInputClass} disabled={input.length > chaLimit}>
+          <div className="flex flex-row gap-2 justify-center">
+            <IconSend />
+            <p className="text-md">{t("create-entry.send")}</p>
+          </div>
+        </button>
       </div>
     </div>
   )

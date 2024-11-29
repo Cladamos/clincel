@@ -25,7 +25,8 @@
       "english": "İngilizce"
     },
     "topic-sidebar": {
-      "topics": "gündem"
+      "topics": "gündem",
+      "create": "Başlık oluştur"
     },
     "create-entry": {
       "prepare": "Entry oluştur",
@@ -35,6 +36,9 @@
         "part-1": "Karakter limiti",
         "part-2": "karakter ile aşıldı"
       }
+    },
+    "create-topic": {
+      "create": "Başlık oluştur"
     }
   }
 }
